@@ -35,9 +35,13 @@ SELECT * FROM 'my/greenhouse'
 
 * 4 - Ecolha `Inserir uma mensagem em uma tabela do DynamoDB` e em seguida `configurar`.
 
-Ao clicar em 'configurar' criaremo nossa primeira tabela.
+![acao](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/inserirMenssagem.JPG?raw=true)
+
+Ao clicar em 'configurar' criaremos nossa primeira tabela.
 
 * 5 Criar tabela
+
+![inicioCriarTabela](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/criarTabela.JPG?raw=true)
 
 * 6 - Nome da tabela
 
@@ -51,9 +55,11 @@ GreenHouseTable
 Chave de partição: Row
 Chave de classificação: PositionRow
 ```
+![defTabela](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/DefinicaoTabela.JPG?raw=true)
 
 Ao término, será exibida a janela a seguir
 
+![tabela](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/TabelaCriada.JPG?raw=true)
 
 Continuando, em nossa regra:
 
@@ -62,13 +68,16 @@ Continuando, em nossa regra:
  - Definiremos a variável para a classificação `${pos}`
  - Criaremos a ação, criando uma função
 
+![table](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/aposCriarTabela.JPG?raw=true)
+
  A imagem a seguir demonstra qual deveria ser o estado até o momento.
 
+![ok](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/ok.JPG?raw=true)
 
  porém em minha conta AWS não tenho permissões para continuar, sendo esta a notificação que me aparece.
 
  
-
+![erro](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/erro.JPG?raw=true)
 
 
 
