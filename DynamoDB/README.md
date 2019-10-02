@@ -13,25 +13,13 @@ Entre no menu **Gerenciar** e escolha a opção **Agir** em seguida _**Criar uma
 Aqui criaremos uma regra para avaliar mensagens enviadas por suas coisas, e determinar o que fazer quando uma mensagem é recebida (por exemplo, gravar os dados em uma tabela do DynamoDB ou invocar uma função Lambda).
 
 
-* 1 - Insira um nome para sua regra: 
+* Nome: `GreenHouseRule`
 
-```
-GreenHouseRule
-```
+* Descrição: `A DynamoDB rule for a GreenHouse`
 
-* 2 - Descreva a ação desta nova regra: 
+* Instrução da consulta da regra: `SELECT * FROM 'my/greenhouse'`
 
-```
-A DynamoDB rule for a GreenHouse
-````
-
-Em Rule query statement (Instrução da consulta da regra), escolha a versão mais recente da lista Using SQL version (Versão do SQL a ser usada). Para Rule query statement (Instrução de consulta da regra), insira:
-
-```
-SELECT * FROM 'my/greenhouse'
-```
-
-* 3 - Adicionar Ação
+* Adicionar Ação
 
 * 4 - Ecolha `Inserir uma mensagem em uma tabela do DynamoDB` e em seguida `configurar`.
 
@@ -46,14 +34,18 @@ Ao clicar em 'configurar' criaremos nossa primeira tabela.
 * 6 - Nome da tabela
 
 ```
+
 GreenHouseTable
+
 ```
 
 * 7 - Chave primária
 
 ```
+
 Chave de partição: Row
 Chave de classificação: PositionRow
+
 ```
 ![defTabela](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/DefinicaoTabela.JPG?raw=true)
 
@@ -70,18 +62,10 @@ Continuando, em nossa regra:
 
 ![table](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/aposCriarTabela.JPG?raw=true)
 
- A imagem a seguir demonstra qual deveria ser o estado até o momento.
+Para finalizar, selecione a opção `adicionar ação`
 
 ![ok](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/ok.JPG?raw=true)
 
- porém em minha conta AWS não tenho permissões para continuar, sendo esta a notificação que me aparece.
+A regra deve estar semelhante a imagem a seguir:
 
- 
-![erro](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/erro.JPG?raw=true)
-
-
-
-
-## Referências
-
-Este tutorial está baseado no [AWS IoT Guia do desenvolvedor](https://docs.aws.amazon.com/pt_br/iot/latest/developerguide/register-device.html)
+![]()
