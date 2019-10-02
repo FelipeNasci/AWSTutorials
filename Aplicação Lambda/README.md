@@ -22,6 +22,10 @@ Serviços -> Pesquise por "Lambda" -> AWS Lambda
 
  - Escolha o esquema `hello-world-python` e, depois, escolha a opção `Configurar`.
 
+
+![esquema](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide1.PNG?raw=true)
+
+
 A seguir, iremos inserir
 
  - Nome da função Lambda: `myLambdaFunction`
@@ -33,6 +37,8 @@ A seguir, iremos inserir
  - Modelos de Política: `Política de publicação do Amazon SNS`
 
  - Criar função
+
+![funcao](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide2.PNG?raw=true)
 
 Substitua o código existente por este
 
@@ -66,14 +72,41 @@ def lambda_handler(event, context):
 
 ```
 
+![code](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide4.PNG?raw=true)
+
 #### Importante
+
+
+**_A variável TopicArn deve ter seu valor substituído pelo arn do tópico SNS já criado_.**
+
+
+Siga os passos:
+
 ```
 
-A variável TopicArn deve ter seu valor substituído pelo arn do tópico SNS já criado.
+Serviços -> SNS
 
 ```
 
-Salve o código, a seguir iremos configurar um evento de teste.
+![console](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide5.PNG?raw=true)
+
+
+```
+
+Tópicos -> MySNSTopic
+
+```
+
+copie o `arn` e substitua o valor da variável `TopicArn`
+
+![arn](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide8.PNG?raw=true)
+
+![tocpicArn](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide8.PNG?raw=true)
+
+
+Salve o código. A seguir iremos configurar um evento de teste.
+
+![EventTest](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide9.PNG?raw=true)
 
  - Configurar Evento de teste
  - Criar novo Evento de teste
@@ -86,14 +119,19 @@ Salve o código, a seguir iremos configurar um evento de teste.
 }
 ```
 
+![evento](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide10.PNG?raw=true)
+
 	- Criar
 
 Em seguida teste a aplicação, o estado deve ser semelhante a imagem abaixo.
 
+![ok](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide11.PNG?raw=true)
 
 #### Criando uma regra
 
-Ainda no AWS Iot
+No AWS Iot
+
+![awsiot](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide12.PNG?raw=true)
 
 ```
 
@@ -110,11 +148,18 @@ Agir -> Criar
  - Adicione uma ação de erro: `Publicar novamente mensagens em um tópico do AWS Iot`
 
 
+![acao](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide14.PNG?raw=true)
+
 #### Testes
 
 No cliente do MQTT, em Tópico de inscrição, insira `lambda/error` e, depois, selecione Inscrever-se no tópico.
 
+![lambdaerro](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide15.PNG?raw=true)
+
 Em Publicar, insira `my/lambda/topic` e, depois, escolha Publicar em um tópico para publicar a mensagem JSON padrão.
+
+
+![mylambdatopic](https://github.com/FelipeNasci/AWSTutorials/blob/master/Aplica%C3%A7%C3%A3o%20Lambda/img/Slide16.PNG?raw=true)
 
 A mensagem deverá ir para um email previamente cadastrado como assinante.
 

@@ -11,6 +11,8 @@ Implementar o exemplo que dispara um evento (usando Políticas - Policy) sempre 
 
 ### [Armazenamento de Dados no DynamoDB](https://github.com/FelipeNasci/AWSTutorials/tree/master/DynamoDB#armazenamento-de-dados-no-dynamodb)
 
+### [Aplicação Lambda](https://github.com/FelipeNasci/AWSTutorials/tree/master/Aplica%C3%A7%C3%A3o%20Lambda#aplica%C3%A7%C3%A3o-lambda)
+
 # Referências
 
 Estes tutoriais estão baseados no [AWS IoT Guia do desenvolvedor](https://docs.aws.amazon.com/pt_br/iot/latest/developerguide/register-device.html)
