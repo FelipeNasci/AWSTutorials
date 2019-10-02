@@ -68,4 +68,8 @@ Para finalizar, selecione a opção `adicionar ação`
 
 A regra deve estar semelhante a imagem a seguir:
 
-![]()
+![fim](https://github.com/FelipeNasci/AWSTutorials/blob/master/DynamoDB/img/fim.jpg?raw=true)
+
+# Referências
+
+Estes tutoriais estão baseados no [AWS IoT Guia do desenvolvedor](https://docs.aws.amazon.com/pt_br/iot/latest/developerguide/register-device.html)

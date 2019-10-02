@@ -105,6 +105,6 @@ Verifique em sua caixa de entrada.
 
 ![resultado](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide16.JPG?raw=true)
 
+# Referências
 
-
-
+Estes tutoriais estão baseados no [AWS IoT Guia do desenvolvedor](https://docs.aws.amazon.com/pt_br/iot/latest/developerguide/register-device.html)
