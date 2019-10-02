@@ -11,6 +11,8 @@ Serviços -> Iot Core -> Agir -> criar uma regra
 
 ```
 
+![criarRegra](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide1.JPG?raw=true)
+
 Nesta janela, você irá definir:
 
 - Nome: `MySNSRule`
@@ -21,14 +23,17 @@ Nesta janela, você irá definir:
 
 Sua tela deverá estar semelhante com a imagem a seguir:
 
-![]()
-
+![regra](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide2.JPG?raw=true)
 
 Vamos definir uma ação que será executada quando a regra corresponder a uma mensagem de entrada. Estas ações podem ser por exemplo, um armazenamento em um banco de dados, execução de funções em nuvem etc.
 
 - Click em: `Adicionar ação`
 
+![addAcao](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide3.JPG?raw=true)
+
 - Selecione: `Enviar uma mensagem como uma notificação por push SNS`
+
+![acao](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide4.JPG?raw=true)
 
 - Crie um destino do SNS: `MySNSTopic`
 
@@ -36,7 +41,11 @@ Vamos definir uma ação que será executada quando a regra corresponder a uma m
 
 - Crie uma função: `MySNSRole`
 
+![configAcao](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide5.JPG?raw=true)
+
 Pronto! Nossa regra SNS está criada.
+
+![ok](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide6.JPG?raw=true)
 
 ### Testes
 
@@ -52,6 +61,8 @@ Serviços -> Digite SNS no campo de pesquisa -> Simple Notification Service
 
 ```
 
+![sns](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide7.JPG?raw=true)
+
 No Amazon SNS:
 
 ```
@@ -60,13 +71,14 @@ Tópicos -> MySNSTopic
 
 ```
 
+![topicos](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide8.JPG?raw=true)
 
 ```
 
  Assinaturas -> Criar assinatura
 
 ```
-
+![criarAssinatura](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide9.JPG?raw=true)
 
 Escolha o protocolo através do qual a mensagem será enviada e o endpoint (em nosso caso, o email que receberá as mensagens).
 
@@ -75,15 +87,23 @@ Escolha o protocolo através do qual a mensagem será enviada e o endpoint (em n
 - Endpoint: `email@mail.com`
 
 
+![criado](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide10.JPG?raw=true)
+
 Caso tenha escolhido uma conta de email, você deverá receber uma confirmação em sua caixa de entrada.
 
+![confirmacao](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide12.JPG?raw=true)
 
 #### Envio da mensagem
 
 Agora podemos ir na opção `Publicar Mensagem` que está contida no submenu `Tópicos` , escrever o assunto e a mensagem e pronto"
 
+![ok](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide13.JPG?raw=true)
+
+![](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide14.JPG?raw=true)
+
 Verifique em sua caixa de entrada.
 
+![resultado](https://github.com/FelipeNasci/AWSTutorials/blob/master/Envio%20de%20Alerta%20(mensagem)/img/Slide16.JPG?raw=true)
 
 
 
